@@ -2476,24 +2476,21 @@ under the License.
       <prim-key field="varianceReasonId"/>
     </entity>
 
-    <!-- ========================================================= -->
-    <!-- Inventory Cycle Count -->
-    <!-- ========================================================= -->
 
     <entity entity-name="InventoryCount"
             package-name="org.apache.ofbiz.product.inventory"
             title="Inventory Count">
-        <field name="inventoryCountId"        type="id"/>
-        <field name="countName"               type="name"/>
-        <field name="statusId"                type="id"/>
-        <field name="facilityId"              type="id"/>
-        <field name="workEffortId"            type="id"/>
-        <field name="assignedUserLoginId"     type="short-varchar"/>
-        <field name="parentInventoryCountId"  type="id"/>
-        <field name="createdDate"             type="date-time"/>
-        <field name="dueDate"                 type="date-time"/>
-        <field name="approvedDate"            type="date-time"/>
-        <field name="comments"               type="comment"/>
+        <field name="inventoryCountId" type="id"/>
+        <field name="countName" type="name"/>
+        <field name="statusId" type="id"/>
+        <field name="facilityId" type="id"/>
+        <field name="workEffortId" type="id"/>
+        <field name="assignedUserLoginId" type="id-vlong"/>
+        <field name="parentInventoryCountId" type="id"/>
+        <field name="createdDate" type="date-time"/>
+        <field name="dueDate" type="date-time"/>
+        <field name="approvedDate" type="date-time"/>
+        <field name="comments" type="comment"/>
         <prim-key field="inventoryCountId"/>
         <relation type="one" rel-entity-name="StatusItem" fk-name="INV_CNT_STTS">
             <key-map field-name="statusId"/>
@@ -2515,19 +2512,19 @@ under the License.
     <entity entity-name="InventoryCountItem"
             package-name="org.apache.ofbiz.product.inventory"
             title="Inventory Count Item">
-        <field name="inventoryCountId"      type="id"/>
-        <field name="countItemSeqId"        type="id"/>
-        <field name="productId"             type="id"/>
-        <field name="inventoryItemId"      type="id"/>
-        <field name="productIdentifier"     type="short-varchar"/>
-        <field name="locationSeqId"         type="id"/>
-        <field name="quantity"              type="floating-point"/>
-        <field name="systemQuantity"        type="floating-point"/>
-        <field name="statusId"              type="id"/>
-        <field name="isRequested"           type="indicator"/>
-        <field name="countedByUserLoginId"  type="short-varchar"/>
-        <field name="createdDate"           type="date-time"/>
-        <field name="createdByUserLoginId"  type="short-varchar"/>
+        <field name="inventoryCountId" type="id"/>
+        <field name="countItemSeqId" type="id"/>
+        <field name="productId" type="id"/>
+        <field name="inventoryItemId" type="id"/>
+        <field name="productIdentifier" type="short-varchar"/>
+        <field name="locationSeqId" type="id"/>
+        <field name="quantity" type="fixed-point"/>
+        <field name="systemQuantity" type="fixed-point"/>
+        <field name="statusId" type="id"/>
+        <field name="isRequested" type="indicator"/>
+        <field name="countedByUserLoginId" type="id-vlong"/>
+        <field name="createdDate" type="date-time"/>
+        <field name="createdByUserLoginId" type="id-vlong"/>
         <prim-key field="inventoryCountId"/>
         <prim-key field="countItemSeqId"/>
         <relation type="one" rel-entity-name="InventoryCount" fk-name="INV_CNT_ITM_HDR">
@@ -2547,14 +2544,14 @@ under the License.
     <entity entity-name="InventoryCountVariance"
             package-name="org.apache.ofbiz.product.inventory"
             title="Inventory Count Variance">
-        <field name="inventoryCountId"      type="id"/>
-        <field name="countItemSeqId"        type="id"/>
-        <field name="varianceSeqId"         type="id"/>
-        <field name="varianceQty"           type="floating-point"/>
-        <field name="varianceReasonId"      type="id"/>
-        <field name="comments"              type="comment"/>
-        <field name="createdDate"           type="date-time"/>
-        <field name="createdByUserLoginId"  type="short-varchar"/>
+        <field name="inventoryCountId" type="id"/>
+        <field name="countItemSeqId" type="id"/>
+        <field name="varianceSeqId" type="id"/>
+        <field name="varianceQty" type="fixed-point"/>
+        <field name="varianceReasonId" type="id"/>
+        <field name="comments" type="comment"/>
+        <field name="createdDate" type="date-time"/>
+        <field name="createdByUserLoginId" type="id-vlong"/>
         <prim-key field="inventoryCountId"/>
         <prim-key field="countItemSeqId"/>
         <prim-key field="varianceSeqId"/>
@@ -2570,11 +2567,11 @@ under the License.
     <entity entity-name="InventoryCountStatus"
             package-name="org.apache.ofbiz.product.inventory"
             title="Inventory Count Status History">
-        <field name="inventoryCountStatusId"  type="id"/>
-        <field name="inventoryCountId"        type="id"/>
-        <field name="statusId"                type="id"/>
-        <field name="statusDate"              type="date-time"/>
-        <field name="changeByUserLoginId"     type="short-varchar"/>
+        <field name="inventoryCountStatusId" type="id"/>
+        <field name="inventoryCountId" type="id"/>
+        <field name="statusId" type="id"/>
+        <field name="statusDate" type="date-time"/>
+        <field name="changeByUserLoginId" type="id-vlong"/>
         <prim-key field="inventoryCountStatusId"/>
         <relation type="one" rel-entity-name="InventoryCount" fk-name="INV_CNT_ST_HDR">
             <key-map field-name="inventoryCountId"/>

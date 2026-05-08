@@ -84,7 +84,6 @@ under the License.
         <auto-attributes include="pk" mode="IN" optional="false"/>
     </service>
 
-    <!-- InventoryCount -->
     <service name="createInventoryCount" default-entity-name="InventoryCount" engine="entity-auto" invoke="create" auth="true">
         <description>Create a InventoryCount</description>
         <auto-attributes include="pk" mode="INOUT" optional="true"/>
@@ -100,7 +99,6 @@ under the License.
         <auto-attributes include="pk" mode="IN"/>
     </service>
 
-    <!-- InventoryCountItem -->
     <service name="createInventoryCountItem" default-entity-name="InventoryCountItem" engine="entity-auto" invoke="create" auth="true">
         <description>Create a InventoryCountItem</description>
         <auto-attributes include="pk" mode="INOUT" optional="true"/>
@@ -117,7 +115,6 @@ under the License.
         <auto-attributes include="pk" mode="IN"/>
     </service>
 
-    <!-- InventoryCountVariance -->
     <service name="createInventoryCountVariance" default-entity-name="InventoryCountVariance" engine="entity-auto" invoke="create" auth="true">
         <description>Create a InventoryCountVariance</description>
         <auto-attributes include="pk" mode="INOUT" optional="true"/>
@@ -135,7 +132,6 @@ under the License.
         <auto-attributes include="pk" mode="IN"/>
     </service>
 
-    <!-- InventoryCountStatus -->
     <service name="createInventoryCountStatus" default-entity-name="InventoryCountStatus" engine="entity-auto" invoke="create" auth="true">
         <description>Create a InventoryCountStatus</description>
         <auto-attributes include="pk" mode="INOUT" optional="true"/>
@@ -150,5 +146,4 @@ under the License.
         <description>Delete a InventoryCountStatus</description>
         <auto-attributes include="pk" mode="IN"/>
     </service>
-
 </services>
