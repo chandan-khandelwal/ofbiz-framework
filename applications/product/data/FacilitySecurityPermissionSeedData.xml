@@ -29,7 +29,15 @@ under the License.
     <SecurityPermission description="Limited view operations in the Facility Manager." permissionId="FACILITY_ROLE_VIEW"/>
     <SecurityPermission description="Limited update operations in the Facility Manager." permissionId="FACILITY_ROLE_UPDATE"/>
     
+    <!-- Inventory Count security -->
+    <SecurityPermission description="View operations for Inventory Count." permissionId="INV_COUNT_VIEW"/>
+    <SecurityPermission description="Create operations for Inventory Count." permissionId="INV_COUNT_CREATE"/>
+    <SecurityPermission description="Update operations for Inventory Count." permissionId="INV_COUNT_UPDATE"/>
+    <SecurityPermission description="Delete operations for Inventory Count." permissionId="INV_COUNT_DELETE"/>
+    <SecurityPermission description="ALL operations for Inventory Count." permissionId="INV_COUNT_ADMIN"/>
+
     <!-- add admin to SUPER permission group -->
     <SecurityGroupPermission fromDate="2001-05-13 12:00:00.0" groupId="SUPER" permissionId="FACILITY_ADMIN"/>
+    <SecurityGroupPermission fromDate="2001-05-13 12:00:00.0" groupId="SUPER" permissionId="INV_COUNT_ADMIN"/>
 
 </entity-engine-xml>
